@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: backend-service-test
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/pys
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: true
+

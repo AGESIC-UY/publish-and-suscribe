@@ -1,0 +1,15 @@
+# system.d configuration file
+
+[Unit]
+Description=Servicio de push
+Wants=pdi-config.service
+After=syslog.target pdi-config.service
+
+[Service]
+User=root
+Environment="SPRING_PROFILES_ACTIVE=uat"
+ExecStart=/bin/bash /opt/pdi/pys-push-service.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

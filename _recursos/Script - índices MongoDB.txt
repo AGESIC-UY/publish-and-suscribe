@@ -1,0 +1,26 @@
+P&S - Índices en MongoDB
+
+Alertas
+- tópico, productor, suscriptor, uuid, fecha (Compuesto por los atributos de los filtros)
+- fecha (descendiente)
+
+Entregas (colecciones de la forma nombreSuscriptor_nombreTopico)
+- fechaCreado, uuid, estado, tipoEntrega (Compuesto por los atributos de los filtros)
+- uuid
+
+Novedades
+- Fecha, uuid, productor.id, topico.id (Compuesto por los atributos de los filtros)
+-fecha (descendiente)
+-uuid
+
+Los scripts para crearlos son los siguientes:
+
+Se debe sustituir "entregas" por el nombre de la colección: nombreSucriptor_nombreTopico.
+
+db.alertas.ensureIndex( { "topico" : 1, "productor":1, "suscriptor" : 1, "uuid" : 1, "fecha" : 1 } , {"name" : "filtro"});
+db.novedades.ensureIndex( { "fecha" : 1, "uuid":1, "productor.id" : 1, "topico.id" : 1 } , {"name" : "filtro"});
+db.entregas.ensureIndex( { "fechaCreado" : 1, "uuid":1, "productor.id" : 1, "topico.id" : 1} , {"name" : "filtro"});
+
+​db.entregas.createIndex({"uuid" : 1} , {"name" : "uuid"});
+db.novedades.createIndex({"fecha" : -1} , {"name" : "fecha"} );
+db.novedades.createIndex({"uuid" : 1} , {"name" : "uuid"});
