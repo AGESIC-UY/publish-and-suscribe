@@ -1,4 +1,4 @@
-# publish-and-suscribe
+# Servicio de novedades de la Plataforma de Interoperabilidad
 
 ## Introducción
 
