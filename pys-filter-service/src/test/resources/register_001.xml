@@ -1,0 +1,240 @@
+<urn:RegisterDocumentSet xmlns:urn="urn:ihe:iti:xds-b:2007">
+    <!--Optional:-->
+    <urn:SubmitObjectsRequest>
+        <urn:RegistryObjectList>
+            <urn:ExtrinsicObject home="" id="DocumentoSSS" isOpaque="false" lid="" mimeType="text/xml"
+                                  objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1"
+                                  status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved">
+                <urn:Slot name="creationTime" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>20160</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Slot name="languageCode" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>es-uy</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Slot name="serviceStartTime" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>20150</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Slot name="serviceStopTime" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>20150914</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Slot name="sourcePatientId" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>3333</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Slot name="repositoryUniqueId" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>1</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Slot name="sourcePatientInfo" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>PID-5|ALEXANDRE^LUCA^^^^</urn:Value>
+                        <urn:Value>PID-7|19921115</urn:Value>
+                        <urn:Value>PID-8|1</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Name>
+                    <urn:LocalizedString charset="" value="Consulta ambulatorio no urgente"/>
+                </urn:Name>
+                <urn:Description>
+                    <urn:LocalizedString charset="" value="N"/>
+                </urn:Description>
+                <urn:Classification classificationNode=""
+                                     classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d"
+                                     classifiedObject="DocumentoSSS" home="" id="cl01" lid=""
+                                     nodeRepresentation="" objectType="" status="">
+                    <urn:Slot name="authorPerson" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>LOPEZ^JUAN</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Slot name="authorInstitution" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>SALUDUY-TEST-UNO</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Slot name="authorRole" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>Medico</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Slot name="authorSpecialty" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>Medicina General</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value=""/>
+                    </urn:Name>
+                </urn:Classification>
+                <urn:Classification classificationNode=""
+                                     classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a"
+                                     classifiedObject="DocumentoSSS" home="" id="cl02" lid=""
+                                     nodeRepresentation="34108-1" objectType="" status="">
+                    <urn:Slot name="codingScheme" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>LOINC</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="Informe imagenologico"/>
+                    </urn:Name>
+                </urn:Classification>
+                <urn:Classification classificationNode=""
+                                     classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f"
+                                     classifiedObject="DocumentoSSS" home="" id="cl03" lid=""
+                                     nodeRepresentation="N" objectType="" status="">
+                    <urn:Slot name="" slotType="codingScheme">
+                        <urn:ValueList>
+                            <urn:Value>2</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="Normal Clinical Data"/>
+                    </urn:Name>
+                </urn:Classification>
+                <urn:Classification classificationNode=""
+                                     classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983"
+                                     classifiedObject="DocumentoSSS" home="" id="cl04" lid=""
+                                     nodeRepresentation="11429006" objectType="" status="">
+                    <urn:Slot name="codingScheme" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>SNOMED-CT</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="Consulta (procedimiento)"/>
+                    </urn:Name>
+                </urn:Classification>
+                <urn:ExternalIdentifier home="" id="ei01"
+                                         identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427"
+                                         lid="" objectType="" registryObject="DocumentoSSS" status=""
+                                         value="33333^^^&amp;2.16.858.2.10000005.72768.1&amp;ISO">
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="XDSDocumentEntry.patientId"/>
+                    </urn:Name>
+                </urn:ExternalIdentifier>
+                <urn:ExternalIdentifier home="" id="ei02"
+                                         identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab"
+                                         lid="" objectType="" registryObject="DocumentoSSS" status=""
+                                         value="2.16.858.2.10000005.67430.20140930133452.1.1">
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="XDSDocumentEntry.uniqueId"/>
+                    </urn:Name>
+                </urn:ExternalIdentifier>
+            </urn:ExtrinsicObject>
+            <urn:RegistryPackage home="" id="212b1dd030-3891-11e6-9b2c-080027485a48" lid="" objectType=""
+                                  status="">
+                <urn:Slot name="submissionTime" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>2015071</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Name>
+                    <urn:LocalizedString charset="" value="Consulta oncologica"/>
+                </urn:Name>
+                <urn:Description>
+                    <urn:LocalizedString charset="" value="N"/>
+                </urn:Description>
+                <urn:Classification classificationNode=""
+                                     classificationScheme="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d"
+                                     classifiedObject="212b1dd030-3891-11e6-9b2c-080027485a48" home=""
+                                     id="urn:uuid:a7058bb9-b4e4-4307-basx-e3f0ab85e11d" lid=""
+                                     nodeRepresentation="" objectType="" status="">
+                    <urn:Slot name="authorPerson" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>444444</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Slot name="authorInstitution" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>SALUDUY-TEST-UNO</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Slot name="authorRole" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>Medico</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="ejemplo"/>
+                    </urn:Name>
+                </urn:Classification>
+                <urn:Classification classificationNode=""
+                                     classificationScheme="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500"
+                                     classifiedObject="212b1dd030-3891-11e6-9b2c-080027485a48" home=""
+                                     id="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e55e" lid=""
+                                     nodeRepresentation="" objectType="" status="">
+                    <urn:Slot name="codingScheme" slotType="">
+                        <urn:ValueList>
+                            <urn:Value>SNOMED-CT</urn:Value>
+                        </urn:ValueList>
+                    </urn:Slot>
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="Nota de consulta"/>
+                    </urn:Name>
+                </urn:Classification>
+                <urn:ExternalIdentifier home="" id="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e23w"
+                                         identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8"
+                                         lid="" objectType=""
+                                         registryObject="212b1dd030-3891-11e6-9b2c-080027485a48" status=""
+                                         value="2">
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="XDSSubmissionSet.uniqueId"/>
+                    </urn:Name>
+                </urn:ExternalIdentifier>
+                <urn:ExternalIdentifier home="" id="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab854321"
+                                         identificationScheme="urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832"
+                                         lid="" objectType=""
+                                         registryObject="212b1dd030-3891-11e6-9b2c-080027485a48" status=""
+                                         value="1">
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="XDSSubmissionSet.sourceId"/>
+                    </urn:Name>
+                </urn:ExternalIdentifier>
+                <urn:ExternalIdentifier home="" id="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85r21q"
+                                         identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446"
+                                         lid="" objectType=""
+                                         registryObject="212b1dd030-3891-11e6-9b2c-080027485a48" status=""
+                                         value="333">
+                    <urn:Name>
+                        <urn:LocalizedString charset="" value="XDSSubmissionSet.patientId"/>
+                    </urn:Name>
+                </urn:ExternalIdentifier>
+            </urn:RegistryPackage>
+            <urn:Classification classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd"
+                                 classificationScheme=""
+                                 classifiedObject="212b1dd030-3891-11e6-9b2c-080027485a48" home="" id="cl76"
+                                 lid="" nodeRepresentation="" objectType="" status="">
+                <urn:Slot name="" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>ejemplo</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+                <urn:Name>
+                    <urn:LocalizedString charset="" value="ejemplo"/>
+                </urn:Name>
+            </urn:Classification>
+            <urn:Association associationType="urn:oasis:names:tc:ebxml-regrep:associationType:HasMember"
+                              home="" id="as01" lid="" objectType=""
+                              sourceObject="212b1dd030-3891-11e6-9b2c-080027485a48" status=""
+                              targetObject="DocumentoSSS">
+                <urn:Slot name="" slotType="">
+                    <urn:ValueList>
+                        <urn:Value>ejemplo</urn:Value>
+                    </urn:ValueList>
+                </urn:Slot>
+            </urn:Association>
+        </urn:RegistryObjectList>
+    </urn:SubmitObjectsRequest>
+</urn:RegisterDocumentSet>
+

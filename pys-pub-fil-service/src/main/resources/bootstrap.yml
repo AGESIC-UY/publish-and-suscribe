@@ -1,0 +1,112 @@
+spring:
+  application:
+    name: pub-fil-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/pys
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: true
+
+---
+spring:
+  profiles: desa
+eureka:
+  client:
+    healthcheck:
+      prefer-same-zone-eureka: true
+    region: zone1
+    availability-zones.zone1: 'ek-peer1,ek-peer2'
+    availability-zones.zone2: 'ek-peer2,ek-peer1'
+    serviceUrl:
+      peer1: http://ek-peer1:8761/eureka/
+      peer2: http://ek-peer2:8762/eureka/
+      defaultZone: ${eureka.client.serviceUrl.peer1},${eureka.client.serviceUrl.peer2}
+
+---
+spring:
+  profiles: qa
+eureka:
+  client:
+    healthcheck:
+      prefer-same-zone-eureka: true
+    region: zone1
+    availability-zones.zone1: 'ek-peer1,ek-peer2'
+    availability-zones.zone2: 'ek-peer2,ek-peer1'
+    serviceUrl:
+      peer1: http://ek-peer1:8761/eureka/
+      peer2: http://ek-peer2:8762/eureka/
+      defaultZone: ${eureka.client.serviceUrl.peer1},${eureka.client.serviceUrl.peer2}
+
+---
+spring:
+  profiles: uat
+eureka:
+  client:
+    healthcheck:
+      prefer-same-zone-eureka: true
+    region: zone1
+    availability-zones.zone1: 'ek-peer1,ek-peer2'
+    availability-zones.zone2: 'ek-peer2,ek-peer1'
+    serviceUrl:
+      peer1: http://ek-peer1:8761/eureka/
+      peer2: http://ek-peer2:8762/eureka/
+      defaultZone: ${eureka.client.serviceUrl.peer1},${eureka.client.serviceUrl.peer2}
+
+---
+spring:
+  profiles: prep
+eureka:
+  client:
+    healthcheck:
+      prefer-same-zone-eureka: true
+    region: zone1
+    availability-zones.zone1: 'ek-peer1,ek-peer2'
+    availability-zones.zone2: 'ek-peer2,ek-peer1'
+    serviceUrl:
+      peer1: http://ek-peer1:8761/eureka/
+      peer2: http://ek-peer2:8762/eureka/
+      defaultZone: ${eureka.client.serviceUrl.peer1},${eureka.client.serviceUrl.peer2}
+
+---
+spring:
+  profiles: prod
+eureka:
+  client:
+    healthcheck:
+      prefer-same-zone-eureka: true
+    region: zone1
+    availability-zones.zone1: 'ek-peer1,ek-peer2'
+    availability-zones.zone2: 'ek-peer2,ek-peer1'
+    serviceUrl:
+      peer1: http://ek-peer1:8761/eureka/
+      peer2: http://ek-peer2:8762/eureka/
+      defaultZone: ${eureka.client.serviceUrl.peer1},${eureka.client.serviceUrl.peer2}
+
+---
+spring:
+  profiles: test
+eureka:
+  client:
+    healthcheck:
+      prefer-same-zone-eureka: true
+    region: zone1
+    availability-zones.zone1: 'ek-peer1,ek-peer2'
+    availability-zones.zone2: 'ek-peer2,ek-peer1'
+    serviceUrl:
+      peer1: http://ek-peer1:8761/eureka/
+      peer2: http://ek-peer2:8762/eureka/
+      defaultZone: ${eureka.client.serviceUrl.peer1},${eureka.client.serviceUrl.peer2}
+
+
+
+
+
