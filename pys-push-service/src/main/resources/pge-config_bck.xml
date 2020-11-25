@@ -1,0 +1,33 @@
+<!-- Configuracion para JBoss con stack CXF -->
+<PGEConfig xmlns="urn:agesic:pge:config:1.0"
+	schemaLocation="urn:agesic:pge:config:1.0 pge-config_1_0.xsd">
+
+    <STSConfig url="https://desarrollo.red.uy:1111/TrustServer/SecurityToken">
+        <Property Key="SSLContextInitializer" Value="uy.gub.agesic.pge.core.ssl.SSLContextInitializerCXF"/>
+        <Property Key="Role" Value="{rol}"/>
+        <Property Key="Policy" Value="token"/>
+        <Property Key="Issuer" Value="Agesic"/>
+        <Property Key="Username" Value="Agesic"/>
+        <!-- Timeout de la invocacion al STS en milisegudos-->
+        <Property Key="STSTimeOut" Value="5000"/>
+        <!-- Timeout del token SAML que se envia al STS en milisegundos -->
+        <Property Key="TokenTimeOut" Value="950000"/>
+    </STSConfig>
+
+	<KeyStore>
+		<!-- Ruta a la keysore del Organismo  -->
+		<Auth Key="KeyStoreURL" Value="/opt/pdi/pys/configuration/keystores/keystore"/>
+		
+		<Auth Key="KeyStorePass" Value="fff>A[8$88d=fff'1113"/>
+		<!-- Alias del certificado del organismo en la keystore -->
+		<Auth Key="KeyStoreAlias" Value="agesic-pdi-key"/>
+		<!-- Keystore para la conexion SSL -->
+  		<Auth Key="SSLKeyStoreURL" Value="/opt/pdi/pys/configuration/keystores/keystore2"/>
+  		
+  		<Auth Key="SSLKeyStorePass" Value="fff>A[8$88d=fff'1113"/>
+  		<!-- truststore para los certificados de confianza -->
+		<Auth Key="TrustStoreURL" Value="/opt/pdi/pys/configuration/keystores/trustore"/>
+		
+  		<Auth Key="TrustStorePass" Value="fff>A[8$88d=fff'1113"/>
+  	</KeyStore>
+</PGEConfig>

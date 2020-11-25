@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>uy.gub.agesic</groupId>
+		<artifactId>pys</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>push-service</artifactId>
+	<packaging>jar</packaging>
+	<version>1.1.0-SNAPSHOT</version>
+
+	<name>pdi:pys-push-service</name>
+
+	<properties>
+		<start-class>uy.gub.agesic.pdi.pys.push.PushServiceApplication</start-class>
+        <main.basedir>${project.parent.basedir}</main.basedir>
+        <version.pge.client>2.5</version.pge.client>
+        <cxf.version>3.2.1</cxf.version>
+        <picketlink.version>2.1.7.Final</picketlink.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>uy.gub.agesic.pdi</groupId>
+			<artifactId>common-utiles</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>uy.gub.agesic.pdi</groupId>
+			<artifactId>common-webproxy</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>uy.gub.agesic.pdi</groupId>
+			<artifactId>pys-backend</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>uy.gub.agesic.pdi</groupId>
+			<artifactId>pys-domain</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>uy.gub.agesic.pdi</groupId>
+            <artifactId>pys-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-core</artifactId>
+            <version>${infinispan-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-commons</artifactId>
+            <version>${infinispan-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-narayana</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>uy.gub.agesic.pge</groupId>
+            <artifactId>pge-client</artifactId>
+            <version>${version.pge.client}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-simple</artifactId>
+            <version>${cxf.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>${cxf.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>${cxf.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>${cxf.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.picketlink</groupId>
+            <artifactId>picketlink-core</artifactId>
+            <version>${picketlink.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jolokia</groupId>
+            <artifactId>jolokia-core</artifactId>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
