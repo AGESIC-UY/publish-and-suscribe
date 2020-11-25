@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<body>
+<wicket:extend>
+
+    <form wicket:id="entregasForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Entregas <label wicket:id="cantRegistros" type="text"/></h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="well filters">
+                    <div class="form-group clearfix">
+                        <div class="row combo">
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon dateInput">Desde</div>
+                                    <span class="hourInput" wicket:id="dateDesde"></span>
+                                 </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon dateInput">Hasta</div>
+                                    <span class="hourInput" wicket:id="dateHasta"></span>
+                                </div>
+                            </div>
+							<div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon spaceRightMax">Estado</div>
+                                    <select wicket:id="estado"></select>
+                                </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Tópico *</div>
+                                    <select wicket:id="topico"></select>
+                                </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Suscriptor *</div>
+                                    <select wicket:id="suscriptor"></select>
+                                </div>
+                            </div>
+							<div class="superblock">
+								<div class="input-group">
+									<div class="input-group-addon">Tipo entrega</div>
+									<select wicket:id="tipoEntrega"></select>
+								</div>
+							</div>
+							<div class="superblock">
+								<div class="input-group">
+									<div class="input-group-addon">Id Novedad</div>
+									<input class="form-control" type="text" wicket:id="uuid"></input>
+								</div>
+							</div>
+							<div class="superblock blocknone">&nbsp;</div>
+								<div><input type="submit" class="btn btn-primary pull-right" wicket:id="buscar" value="Buscar" /></div>
+								<div><input type="submit" class="reset" wicket:id="limpiarFiltros" value="Limpiar Filtros" /></div>
+							</div>
+						</div>
+                    </div>
+                </div>
+
+                <span wicket:id="group">
+					<table class="table table-bordered" id="entregas">
+						<thead>
+							<tr>
+								<th width="30px"><input type="checkbox" wicket:id="groupSelector"></input></th>
+								<th>Id Novedad</th>
+								<th>Suscriptor</th>
+								<th>Productor</th>
+								<th>Tópico</th>
+								<th>Fecha de recepción</th>
+								<th>Fecha de envío</th>
+								<th>Estado</th>
+								<th>Tipo entrega</th>
+								<th>Cantidad de reintentos</th>
+								<th>Fecha último intento</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr wicket:id="rows">
+								<td class="vcenter">
+									<input type="checkbox" wicket:id="dataRowSelector"/>
+								</td>
+								<td>
+									<a wicket:id="dataRowLink" title="Trabajar con esta Entrega">
+										<span wicket:id="dataRowId"></span>
+									</a>
+								</td>
+								<td wicket:id="dataRow"></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+
+				<div class="pull-left">
+                    <div class="btn-group">
+                        <input type="submit" class="btn btn-primary" wicket:id="cancelar" value="Cancelar" />
+                        <input type="submit" class="btn btn-primary" wicket:id="reenviar" value="Reenviar" />
+                    </div>
+                </div>
+				
+                <div class="pagination-area pull-right">
+                    <span wicket:id="pagingNavigator"></span>
+                </div>
+        </div>
+
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<body>
+<wicket:extend>
+
+    <form wicket:id="addSuscriptorForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Asociar suscriptor a Tópico </h1>
+            <div class="text-right">
+                <a wicket:id="linkVolver">Volver al listado</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <fieldset class="campos">
+                    <div class="form-group">
+                    <label>Suscriptor * </label>
+                    <select wicket:id="suscriptor" style="width:200px;"></select>
+                    </div>
+
+                    <div class="form-group">
+                    <label>Modo de envío *</label>
+                    <select wicket:id="modoEnvio"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label wicket:id="labelDeliveryAddr"></label>
+                        <input wicket:id="deliveryAddr" class="form-control" type="text">
+                        <div wicket:id="deliveryAddrFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label wicket:id="labelDeliveryWsaTo">Wsa To * </label>
+                        <input wicket:id="deliveryWsaTo" class="form-control" type="text">
+                        <div wicket:id="deliveryWsaToFeedback"></div>
+                    </div>
+
+                    <div class="row">&nbsp;</div>
+                    <div class="pull-left">
+                        <div class="btn-group">
+                            <input type="submit" class="btn btn-primary" wicket:id="btnAgregarSuscriptor"
+                                   value="Confirmar" style="width:100px;"/>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>

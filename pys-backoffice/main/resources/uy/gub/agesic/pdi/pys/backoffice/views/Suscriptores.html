@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<body>
+<wicket:extend>
+
+    <form wicket:id="suscriptoresForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Suscriptores <label wicket:id="cantRegistros" type="text"/></h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="well filters searchProductores">
+                    <div class="form-group clearfix">
+                        <div class="row">
+                            <div class="superblockTwo">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Nombre</div>
+                                    <input class="form-control" type="text" wicket:id="nombre"></input>
+                                </div>
+                            </div>
+                            <div class="superblockTwo">
+                                <div class="input-group">
+                                    <div class="input-group-addon">DN</div>
+                                    <input class="form-control" type="text" wicket:id="dn"></input>
+                                </div>
+                            </div>
+							<div class="superblockTwo">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Estado</div>
+                                    <select wicket:id="habilitado"></select>
+                                </div>
+                            </div>
+							<div class="superblockTwo">
+								<div><input type="submit" class="btn btn-primary pull-right" wicket:id="buscar" value="Buscar" /></div>
+								<div><input type="submit" class="reset" wicket:id="limpiarFiltros" value="Limpiar Filtros" /></div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				
+                <span wicket:id="group">
+					<table class="table table-bordered" id="suscriptores">
+						<thead>
+							<tr>
+								<th width="30px"><input type="checkbox" wicket:id="groupSelector"></input></th>
+								<th class="name">Nombre</th>
+								<th>DN</th>
+								<th>Habilitado</th>
+								<th>Fecha de Creación</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr wicket:id="rows" class="acotado">
+								<td class="vcenter">
+									<input type="checkbox" wicket:id="dataRowSelector"/>
+								</td>
+								<td>
+									<a wicket:id="dataRowLink" title="Trabajar con este Suscriptor">
+										<span wicket:id="dataRowNombre"></span>
+									</a>
+								</td>
+								<td wicket:id="dataRow"></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+				
+				<div class="pull-left">
+                    <div class="btn-group">
+                        <input type="submit" class="btn btn-primary" wicket:id="agregar" value="Agregar" />
+                        <input type="submit" class="btn btn-primary" wicket:id="modificar" value="Editar" />
+                        <input type="submit" class="reset" wicket:id="eliminar" value="Eliminar" />
+                    </div>
+                </div>
+
+                <div class="pagination-area pull-right">
+                    <span wicket:id="pagingNavigator"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>

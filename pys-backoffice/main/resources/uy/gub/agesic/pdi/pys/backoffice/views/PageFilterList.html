@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <body>
+        <wicket:extend>
+            <form wicket:id="filterListForm" role="form" class="gformfilter form-horizontal">
+                <div class="page-title clearfix">
+                    <h1 class="header">Filtros <label wicket:id="cantRegistros" type="text"/></h1>
+                </div>
+                <div class="row wrapper-fields">
+                    <div class="col-sm-12">
+                        <div class="well filters">
+                            <div class="form-group clearfix">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="row row-inner">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Nombre</label>
+                                                <div class="col-sm-10">
+                                                    <input wicket:id="name" type="text" class="form-control" placeholder="Nombre" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <ul class="list-inline pull-right">
+                                            <li>
+                                                <input type="submit" class="btn btn-primary pull-right" wicket:id="buscar" value="Buscar" />
+                                            </li>
+                                            <li>
+                                                <input type="submit" class="reset" wicket:id="limpiarFiltros" value="Limpiar Filtros" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span wicket:id="group">
+                            <table class="table table-bordered" id="filters-list">
+                                <thead>
+                                    <tr>
+                                        <th width="30px">
+                                            <input type="checkbox" wicket:id="groupSelector" />
+                                        </th>
+                                        <th>Nombre</th>
+                                        <th>Tipo</th>
+                                        <th>Operador</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr wicket:id="rows">
+                                        <td class="vcenter">
+                                            <input type="checkbox" wicket:id="dataRowSelector"/>
+                                        </td>
+                                        <td>
+                                            <a wicket:id="dataRowLink" title="Trabajar con este Filtro">
+                                                <span wicket:id="dataRowName"></span>
+                                            </a>
+                                        </td>
+                                        <td wicket:id="dataRow"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </span>
+                        <div class="pull-left">
+                            <div class="btn-group">
+                                <input type="submit" class="btn btn-primary" wicket:id="agregar" value="Agregar" />
+                                <input type="submit" class="btn btn-primary" wicket:id="modificar" value="Editar" />
+                                <input type="submit" class="reset" wicket:id="eliminar" value="Eliminar" />
+                            </div>
+                        </div>
+                        <div class="pagination-area pull-right">
+                            <span wicket:id="pagingNavigator"></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </wicket:extend>
+    </body>
+</html>

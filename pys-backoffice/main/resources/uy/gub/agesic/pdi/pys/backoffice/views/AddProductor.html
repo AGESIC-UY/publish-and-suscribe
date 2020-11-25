@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<body>
+<wicket:extend>
+
+    <form wicket:id="addProductorForm">
+        <div class="page-title clearfix">
+            <h1 class="header">Asociar productor a Tópico </h1>
+            <div class="text-right">
+                <a wicket:id="linkVolver">Volver al listado</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <fieldset>
+                    <div class="form-group">
+                        <label wicket:id="labelProductor"></label>
+                        <select wicket:id="productor" style="width:200px;"></select>
+                        <div wicket:id="deliveryProductorFeedback"></div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="pull-left">
+                        <div class="btn-group">
+                            <input type="submit" class="btn btn-primary" wicket:id="btnAgregarProductor"
+                                   value="Confirmar"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>

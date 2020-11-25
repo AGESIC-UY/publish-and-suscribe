@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<body>
+<wicket:extend>
+
+    <form wicket:id="trabajarConEntregaForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Detalles de la Entrega</h1>
+            <div class="text-right">
+                <a wicket:id="linkVolver">Volver al listado de entregas</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <fieldset class="campos">
+
+                    <div class="form-group">
+                        <label>Id Novedad</label>
+                        <input wicket:id="uuid" class="form-control" type="text">
+                        <div wicket:id="uuidFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Suscriptor</label>
+                        <input wicket:id="nombreSuscriptor" class="form-control" type="text">
+                        <div wicket:id="nombreSuscriptorFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tópico</label>
+                        <input wicket:id="nombreTopico" class="form-control" type="text">
+                        <div wicket:id="nombreTopicoFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Productor</label>
+                        <input wicket:id="nombreProductor" class="form-control" type="text">
+                        <div wicket:id="nombreProductorFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha de creación</label>
+                        <input wicket:id="fechaCreacion" class="form-control" type="text">
+                        <div wicket:id="fechaCreacionFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha de envío</label>
+                        <input wicket:id="fechaEnvio" class="form-control" type="text">
+                        <div wicket:id="fechaEnvioFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input wicket:id="estado" class="form-control" type="text"></input>
+                        <div wicket:id="estadoFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tipo de entrega</label>
+                        <input wicket:id="tipoEntrega" class="form-control" type="text"></input>
+                        <div wicket:id="tipoEntregaFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Motivo</label>
+                        <input wicket:id="reason" class="form-control" type="text" />
+                        <div wicket:id="reasonFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>XML</label>
+                        <textarea wicket:id="xmlContenido" class="form-control" rows="10" cols="40"></textarea>
+                        <div wicket:id="xmlContenidoFeedback"></div>
+                    </div>
+
+                    <div class="btn-group">
+                        <input type="submit" class="btn btn-primary" wicket:id="cancelar" value="Cancelar Entrega" />
+                        <input type="submit" class="btn btn-primary" wicket:id="reenviar" value="Reenviar Entrega" />
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+
+    </form>
+
+</wicket:extend>
+</body>
+</html>

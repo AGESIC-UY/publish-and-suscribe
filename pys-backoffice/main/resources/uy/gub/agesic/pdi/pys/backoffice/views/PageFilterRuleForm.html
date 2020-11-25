@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <body>
+        <wicket:extend>
+            <form wicket:id="filterRuleEntityForm" role="form" class="gform">
+                <div class="page-title clearfix">
+                    <h1 class="header">Asociar regla a filtro</h1>
+                    <div class="text-right">
+                        <a wicket:id="linkVolver">Atrás</a>
+                    </div>
+                </div>
+                <div class="row wrapper-fields">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelName">Nombre *</label>
+                            <input wicket:id="name" class="form-control" type="text" />
+                            <div wicket:id="nameFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelOperator">Operador *</label>
+                            <select wicket:id="operator" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>Factor izquierdo</legend>
+                            <div class="form-group">
+                                <label  wicket:id="labelLeftFactorType">Tipo *</label>
+                                <select wicket:id="leftFactorType" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelLeftFactorValue">Valor *</label>
+                                <input wicket:id="leftFactorValue" class="form-control" type="text" />
+                                <div wicket:id="modalSubscribersLeft"></div>
+                                <a wicket:id="showModalSubscribersLeft">Generar lista de subcriptores</a>
+                                <div wicket:id="leftFactorValueFeedback"></div>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelLeftFactorSubscriber">Suscriptor *</label>
+                                <select wicket:id="leftFactorSubscriber" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelLeftFactorValueType">Tipo de valor *</label>
+                                <select wicket:id="leftFactorValueType" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelLeftFactorValueFormatNumeric">Formato *</label>
+                                <select wicket:id="leftFactorValueFormatNumeric" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelLeftFactorValueFormatDatetime">Formato *</label>
+                                <select wicket:id="leftFactorValueFormatDatetime" class="form-control"></select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>Factor derecho</legend>
+                            <div class="form-group">
+                                <label wicket:id="labelRightFactorType">Tipo *</label>
+                                <select wicket:id="rightFactorType" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelRightFactorValue">Valor *</label>
+                                <input wicket:id="rightFactorValue" class="form-control" type="text" />
+                                <div wicket:id="modalSubscribersRight"></div>
+                                <a wicket:id="showModalSubscribersRight">Generar lista de subcriptores</a>
+                                <div wicket:id="rightFactorValueFeedback"></div>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelRightFactorSubscriber">Suscriptor *</label>
+                                <select wicket:id="rightFactorSubscriber" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelRightFactorValueType">Tipo de valor *</label>
+                                <select wicket:id="rightFactorValueType" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelRightFactorValueFormatNumeric">Formato *</label>
+                                <select wicket:id="rightFactorValueFormatNumeric" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label wicket:id="labelRightFactorValueFormatDatetime">Formato *</label>
+                                <select wicket:id="rightFactorValueFormatDatetime" class="form-control"></select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <input wicket:id="btnAddRule" type="submit" class="btn btn-primary" value="Guardar" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </wicket:extend>
+    </body>
+</html>

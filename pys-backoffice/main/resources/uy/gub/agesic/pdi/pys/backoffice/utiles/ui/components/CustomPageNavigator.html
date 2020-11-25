@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html xmlns:wicket="http://wicket.apache.org">
+
+	<body>
+		<wicket:panel>
+			
+			<div class="input-group">
+				<div class="input-group-addon">Ver</div>
+				<select class="btn btn-default form-control" wicket:id="pageSizes"></select>				
+			</div>	
+		
+			<ul class="pagination">
+				<li wicket:id="pager">
+					<a wicket:id="pageLink">
+						<span wicket:id="pageNumber"></span>
+					</a>
+				</li>
+			</ul>
+		
+		</wicket:panel>
+	</body>
+	
+</html>

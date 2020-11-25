@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <body>
+        <wicket:extend>
+            <form wicket:id="trabajarConTopicoForm" role="form" class="gform">
+                <div class="page-title clearfix">
+                    <h1 class="header">Trabajar con tópico</h1>
+                    <div class="text-right">
+                        <a wicket:id="linkVolver">Volver al listado de tópicos</a>
+                    </div>
+                </div>
+                <div class="row wrapper-fields">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Nombre *</label>
+                            <input wicket:id="nombreTopico" class="form-control" type="text" />
+                            <div wicket:id="nombreFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Elemento Raíz *</label>
+                            <input wicket:id="elementoRaiz" class="form-control" type="text" />
+                            <div wicket:id="elementoRaizFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Namespace *</label>
+                            <input wicket:id="namespaceField" class="form-control" type="text" />
+                            <div wicket:id="namespaceFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Soap Action *</label>
+                            <input wicket:id="soapAction" class="form-control" type="text">
+                            <div wicket:id="soapActionFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelHabilitado"></label>
+                            <select wicket:id="habilitado" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelFechaCreacion"></label>
+                            <input wicket:id="fechaCreacion" class="form-control" type="text" />
+                            <div wicket:id="fechaCreacionFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <button wicket:id="btnGuardar" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-title clearfix">
+                    <h1 class="header subtitle">Productores</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr wicket:id="rowsProd">
+                                    <td>
+                                        <a wicket:id="dataRowLinkProd" title="Trabajar con este productor">
+                                            <span wicket:id="dataRowProdNombre"></span>
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        <a wicket:id="linkEliminarProductor">
+                                            <span wicket:id="eliminarProd" style="word-spacing: normal"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pull-left">
+                            <div class="btn-group">
+                                <input type="submit" class="btn btn-primary" wicket:id="nuevoProductor" value="Agregar Productor" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-title clearfix">
+                    <h1 class="header subtitle">Suscriptores</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Modo de envío</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr wicket:id="rowsSusc">
+                                    <td>
+                                        <a wicket:id="dataRowLinkSusc" title="Trabajar con este suscriptor">
+                                            <span wicket:id="dataRowNombre"></span>
+                                        </a>
+                                    </td>
+                                    <td wicket:id="dataRowSusc"></td>
+                                    <td>
+                                        <a wicket:id="linkEditarSuscriptor">
+                                            <span wicket:id="editarSusc" style="word-spacing: normal"></span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a wicket:id="linkEliminarSuscriptor">
+                                            <span wicket:id="eliminarSusc" style="word-spacing: normal"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pull-left">
+                            <div class="btn-group">
+                                <input type="submit"
+                                       class="btn btn-primary"
+                                       wicket:id="nuevoSuscriptor"
+                                       value="Agregar Suscriptor" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-title clearfix">
+                    <h1 class="header subtitle">Filtros</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr wicket:id="rowsFilterTopic">
+                                <td>
+                                    <a wicket:id="dataRowLinkFilter" title="Trabajar con este filtro">
+                                        <span wicket:id="dataRowName"></span>
+                                    </a>
+                                </td>
+                                <td wicket:id="dataRowFT"></td>
+                                <td>
+                                    <a wicket:id="linkUpdateFilter">
+                                        <span wicket:id="updateFilter" style="word-spacing: normal"></span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a wicket:id="linkDeleteFilter">
+                                        <span wicket:id="deleteFilter" style="word-spacing: normal"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="pull-left">
+                            <div class="btn-group">
+                                <input type="submit"
+                                       class="btn btn-primary"
+                                       wicket:id="newTopicFilter"
+                                       value="Agregar Filtro" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </wicket:extend>
+    </body>
+</html>

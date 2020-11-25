@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<body>
+<wicket:extend>
+
+    <form wicket:id="trabajarConProductorForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Trabajar con productor</h1>
+            <div class="text-right">
+                <a wicket:id="linkVolver">Volver al listado de productores</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <fieldset class="campos">
+                    <div class="form-group">
+                        <label>Nombre *</label>
+                        <input wicket:id="nombre" class="form-control" type="text">
+                        <div wicket:id="nombreFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>DN *</label>
+                        <input wicket:id="dn" class="form-control" type="text">
+                        <div wicket:id="dnFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label wicket:id="labelHabilitado"></label>
+                        <select wicket:id="habilitado"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label wicket:id="labelFechaCreacion"></label>
+                        <input wicket:id="fechaCreacion" class="form-control" type="text">
+                        <div wicket:id="fechaCreacionFeedback"></div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button wicket:id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+
+    </form>
+
+</wicket:extend>
+</body>
+</html>

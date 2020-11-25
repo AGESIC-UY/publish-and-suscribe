@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<body>
+<wicket:extend>
+
+    <form wicket:id="novedadesForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Novedades <label wicket:id="cantRegistros" type="text"/></h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="well filters searchProductores">
+                    <div class="form-group clearfix">
+                        <div class="row combo">
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon dateInput">Desde</div>
+                                    <span class="hourInput" wicket:id="dateDesde"></span>
+                                 </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon dateInput">Hasta</div>
+                                    <span class="hourInput" wicket:id="dateHasta"></span>
+                                </div>
+                            </div>
+							<div class="superblock">
+								<div class="input-group">
+									<div class="input-group-addon">Id Novedad</div>
+									<input class="form-control" type="text" wicket:id="uuidNovedad"></input>
+								</div>
+							</div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Tópico</div>
+                                    <select wicket:id="topico"></select>
+                                </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Productor</div>
+                                    <select wicket:id="productor"></select>
+                                </div>
+                            </div>
+							<div class="superblock">
+								<div><input type="submit" class="btn btn-primary pull-right" wicket:id="buscar" value="Buscar" /></div>
+								<div><input type="submit" class="reset" wicket:id="limpiarFiltros" value="Limpiar Filtros" /></div>
+							</div>
+						</div>
+                    </div>
+                </div>
+
+                <span wicket:id="group">
+					<table class="table table-bordered" id="novedades">
+						<thead>
+							<tr>
+								<th>Id Novedad</th>
+								<th>Productor</th>
+								<th>Tópico</th>
+								<th>Fecha de Creación</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr wicket:id="rows">
+								<td>
+									<a wicket:id="dataRowLink" title="Trabajar con esta Novedad">
+										<span wicket:id="dataRowId"></span>
+									</a>
+								</td>
+								<td wicket:id="dataRow"></td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+
+                <div class="pagination-area pull-right">
+                    <span wicket:id="pagingNavigator"></span>
+                </div>
+				
+            </div>
+
+        </div>
+
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>

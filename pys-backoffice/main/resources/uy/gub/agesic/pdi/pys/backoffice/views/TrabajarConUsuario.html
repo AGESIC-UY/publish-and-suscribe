@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<body>
+<wicket:extend>
+
+    <form wicket:id="trabajarConUsuarioForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Trabajar con usuario</h1>
+            <div class="text-right">
+                <a wicket:id="linkVolver">Volver al listado de usuarios</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <fieldset>
+
+                    <!--<div class="form-group">-->
+                          <!--<input wicket:id="id" class="form-control" hidden="true" type="hidden">-->
+                    <!--</div>-->
+
+                    <div class="form-group">
+                        <label>Usuario *</label>
+                        <input wicket:id="login" class="form-control" type="text">
+                        <div wicket:id="loginFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input wicket:id="nombre" class="form-control" type="text">
+                        <div wicket:id="nombreFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input wicket:id="apellido" class="form-control" type="text">
+                        <div wicket:id="apellidoFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label wicket:id="labelPassword">Contraseña (Max. 15) *</label>
+                        <input wicket:id="password" class="form-control" type="password">
+                        <div wicket:id="passwordFeedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Administrador</label>
+                        <input wicket:id="admin" type="checkbox" width="40px">
+                        <div wicket:id="adminFeedback"></div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button wicket:id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+
+    </form>
+
+</wicket:extend>
+</body>
+</html>

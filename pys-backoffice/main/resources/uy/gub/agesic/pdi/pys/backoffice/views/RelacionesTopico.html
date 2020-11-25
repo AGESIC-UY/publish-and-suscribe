@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<body>
+<wicket:extend>
+
+    <form wicket:id="relacionesTopicoForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Entidades relacionadas al tópico </h1>
+            <div class="text-right">
+                <a wicket:id="linkVolver">Volver al listado</a>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Productores</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="rowsProd">
+                <td wicket:id="dataRowProd"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Suscriptores</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="rowsSusc">
+                <td wicket:id="dataRowSusc"></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <div class="pull-left">
+            <div class="btn-group">
+                <input type="submit" class="btn btn-primary" wicket:id="eliminar" value="Eliminar"/>
+            </div>
+        </div>
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>

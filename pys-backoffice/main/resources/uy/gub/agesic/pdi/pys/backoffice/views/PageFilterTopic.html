@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <body>
+        <wicket:extend>
+            <form wicket:id="filterTopicForm" role="form" class="gform">
+                <div class="page-title clearfix">
+                    <h1 class="header">Asociar filtro a Tópico </h1>
+                    <div class="text-right">
+                        <a wicket:id="linkVolver">Volver al listado</a>
+                    </div>
+                </div>
+                <div class="row wrapper-fields">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelFilterTopicFilter">Filtro * </label>
+                            <select wicket:id="filterTopicFilter" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelFilterTopicType">Tipo * </label>
+                            <select wicket:id="filterTopicType" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label wicket:id="labelFilterTopicMaximumOccurrences">Cantidad de ocurrencias *</label>
+                            <input wicket:id="filterTopicMaximumOccurrences" class="form-control" type="text" />
+                            <div wicket:id="filterTopicMaximumOccurrencesFeedback"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <input wicket:id="btnAddFilterTopic" type="submit" class="btn btn-primary" value="Guardar" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </wicket:extend>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <springProfile name="desa, qa, local, geocom">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <prudent>true</prudent>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>/usr/local/var/log/pys/pys-backoffice.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>2</maxHistory>
+                <totalSizeCap>500MB</totalSizeCap>
+            </rollingPolicy>
+
+            <encoder>
+                <pattern>[%date] [%X{host}] [%level] [pys-backoffice-service] [%logger{0}] [%X{transactionId}] [%X{messageID}] [Backoffice] [%X{topic}] [%msg] [%X{duration}]%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="RSYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+            <syslogHost>127.0.0.1</syslogHost>
+            <port>514</port>
+            <facility>LOCAL0</facility>
+            <suffixPattern>[%date] [%X{host}] [%level] [pys-backoffice-service] [%logger{0}] [%X{transactionId}] [%X{messageID}] [Backoffice] [%X{topic}] [%msg] [%X{duration}]%n</suffixPattern>
+        </appender>
+
+        <appender name="ASYNC-FILE" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="FILE" />
+        </appender>
+
+        <appender name="ASYNC-RSYSLOG" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="RSYSLOG" />
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="ASYNC-FILE" />
+            <appender-ref ref="ASYNC-RSYSLOG" />
+        </root>
+    </springProfile>
+    <springProfile name="uat, prep, prod, test">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <prudent>true</prudent>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>/var/log/pys/pys-backoffice.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>10GB</totalSizeCap>
+            </rollingPolicy>
+
+            <encoder>
+                <pattern>[%date] [%X{host}] [%level] [pys-backoffice-service] [%logger{0}] [%X{transactionId}] [%X{messageID}] [Backoffice] [%X{topic}] [%msg] [%X{duration}]%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="RSYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+            <syslogHost>127.0.0.1</syslogHost>
+            <port>514</port>
+            <facility>LOCAL0</facility>
+            <suffixPattern>[%date] [%X{host}] [%level] [pys-backoffice-service] [%logger{0}] [%X{transactionId}] [%X{messageID}] [Backoffice] [%X{topic}] [%msg] [%X{duration}]%n</suffixPattern>
+        </appender>
+
+        <appender name="ASYNC-FILE" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="FILE" />
+        </appender>
+
+        <appender name="ASYNC-RSYSLOG" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="RSYSLOG" />
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="ASYNC-FILE" />
+            <appender-ref ref="ASYNC-RSYSLOG" />
+        </root>
+    </springProfile>
+</configuration>

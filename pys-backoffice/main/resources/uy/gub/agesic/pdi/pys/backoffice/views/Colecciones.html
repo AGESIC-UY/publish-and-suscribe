@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<body>
+<wicket:extend>
+
+    <form wicket:id="coleccionesForm">
+
+        <div class="page-title clearfix">
+            <h1 class="header">Colecciones <label wicket:id="cantRegistros" type="text"/></h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="well filters searchProductores">
+                    <div class="form-group clearfix">
+                        <div class="row combo">
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon dateInput">Desde</div>
+                                    <span class="hourInput" wicket:id="dateDesde"></span>
+                                </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon dateInput">Hasta</div>
+                                    <span class="hourInput" wicket:id="dateHasta"></span>
+                                </div>
+                            </div>
+							<div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Estado *</div>
+                                    <select wicket:id="estado"></select>
+                                </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Tópico *</div>
+                                    <select wicket:id="topico"></select>
+                                </div>
+                            </div>
+                            <div class="superblock">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Suscriptor</div>
+                                    <select wicket:id="suscriptor"></select>
+                                </div>
+                            </div>
+                            <div class="superblock">
+								<div><input type="submit" class="btn btn-primary pull-right" wicket:id="buscar" value="Buscar" /></div>
+								<div><input type="submit" class="reset" wicket:id="limpiarFiltros" value="Limpiar Filtros" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <span wicket:id="group">
+					<table class="table table-bordered" id="colecciones">
+						<thead>
+							<tr>
+								<th>Tópico</th>
+								<th>Suscriptor</th>
+								 <th>Estado</th>
+								<th>Total</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr wicket:id="rows">
+								<td wicket:id="dataRow"></td>
+								<td>
+									<a wicket:id="linkVerEntregas">
+										<span wicket:id="verEntregas" style="word-spacing: normal"></span>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</span>
+
+                <div class="pagination-area pull-right">
+                    <span wicket:id="pagingNavigator"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</wicket:extend>
+
+</body>
+</html>
