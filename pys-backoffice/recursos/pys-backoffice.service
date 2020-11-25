@@ -1,0 +1,16 @@
+# system.d configuration file
+
+[Unit]
+Description=Backoffice de P&S
+After=syslog.target
+
+[Service]
+User=root
+Environment="SPRING_PROFILES_ACTIVE=__PROFILE__"
+ExecStart=/bin/bash /opt/pdi/pys-backoffice.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
